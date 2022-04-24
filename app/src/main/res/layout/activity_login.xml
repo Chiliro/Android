@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="图书管理系统"
+            android:textColor="@color/black"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+
+        <EditText
+            android:id="@+id/log_name"
+            style="@style/login_EditText"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="昵  称"
+            android:maxLength="12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+
+        <EditText
+            android:id="@+id/log_password"
+            style="@style/login_EditText"
+            android:hint="密  码"
+            android:inputType="textPassword"
+            android:maxLength="11">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/remember"
+
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="记住密码"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+        <Button
+            android:id="@+id/login"
+            style="@style/login_button"
+            android:text="登 录" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/log_register"
+            style="@style/login_buttonBottom"
+            android:text="注 册" />
+
+        <RelativeLayout style="@style/Placeholder_layout_horizontal" />
+
+        <Button
+            android:id="@+id/log_back"
+            style="@style/login_buttonBottom"
+            android:text="退出" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

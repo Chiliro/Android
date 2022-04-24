@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5C3C2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:text="个人中心"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/my_identification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="昵称"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/my_studentName"
+                    style="@style/My_personInformationTextView"/>
+
+                <TextView
+                    android:id="@+id/my_studentID"
+                    style="@style/My_personInformationTextView" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/Placeholder_layout_horizontal"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/switchAccount"
+                    android:text="切换账号"
+                    android:drawableRight="@drawable/change"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/my_readerType"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="42dp"
+                android:gravity="center"
+                android:text="读者类别：本科生"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/my_totalCanLendNum"
+                android:text="总可借书:10本"
+                style="@style/My_bookInformationTextView"/>
+
+
+            <TextView
+                android:id="@+id/my_CanLendDay"
+                style="@style/My_bookInformationTextView"
+                android:text="可借天数:天" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/modifyInformation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                style="@style/My_textView"
+                android:text="修改信息" />
+
+            <RelativeLayout
+                style="@style/Placeholder_layout_horizontal"/>
+
+            <Button
+                android:id="@+id/modifyInformation"
+                android:text="修改信息"
+                android:drawableRight="@drawable/expand"
+
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/chang_one_layout"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+
+            android:layout_height="50dp">
+            <Button
+                android:id="@+id/chang_QQ"
+                android:text="修改QQ"
+                style="@style/My_EditButton"/>
+            <Button
+                android:id="@+id/chang_password"
+                android:text="修改密码"
+                style="@style/My_EditButton"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/chang_QQ_edit"
+            android:layout_height="60dp"
+            style="@style/My_editLayout">
+
+            <EditText
+                android:id="@+id/QQ_edit"
+                style="@style/My_editView"
+                android:hint="更换绑定QQ"
+                android:inputType="number"
+                android:maxLength="8" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/My_editLayout"
+            android:layout_height="120dp"
+            android:id="@+id/chang_password_edit">
+
+
+            <EditText
+                style="@style/My_editView"
+                android:id="@+id/password_edit"
+                android:hint="修改后密码"
+                android:inputType="textPassword"
+                android:maxLength="11" />
+            <EditText
+                style="@style/My_editView"
+                android:id="@+id/password_confirm_edit"
+                android:hint="再次输入修改后的密码"
+                android:inputType="textPassword"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/My_edit_check_password"
+            android:layout_height="60dp"
+            style="@style/My_editLayout">
+
+            <EditText
+                style="@style/My_editView"
+                android:id="@+id/password_check"
+                android:hint="当前密码校验"
+                android:inputType="textPassword"
+                android:maxLength="11" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Confirm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Confirm_changes"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:text="确认修改"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/github_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:descendantFocusability="blocksDescendants"
+            tools:ignore="InvalidId">
+
+            <TextView
+                style="@style/My_textView"
+                android:text="Github" />
+
+            <RelativeLayout
+                style="@style/Placeholder_layout_horizontal"/>
+            <Button
+                android:id="@+id/github"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/change" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/loginOut"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:text="注销账户"
+                android:textColor="#FF0000"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

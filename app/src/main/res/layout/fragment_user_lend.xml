@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAEBD7"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FAEBD7"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="还  书"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/menu"
+                    android:background="@null" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/edit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="right"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:id="@+id/no_select"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:text="取消"
+                    android:textSize="12dp"
+                    android:textColor="@color/black" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:id="@+id/select_all"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:text="全选"
+                    android:textSize="12dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/lend_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/user_return_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--            <ListView-->
+<!--                android:id="@+id/user_lend_viewList"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--            </ListView>-->
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout style="@style/lend_or_return_layout">
+            <Button
+                android:id="@+id/lend"
+                style="@style/lend_or_return_button"
+                android:text="还  书" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

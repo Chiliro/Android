@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAEBD7"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FAEBD7"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:text="借  书"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@null"
+                    android:src="@drawable/menu"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText"
+                    style="@style/return_search_choice_edit"
+
+                    android:hint="书名/作者/出版社" />
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:text="搜索"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/find_refresh">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/user_finding_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+<!--            <ListView-->
+<!--                android:id="@+id/user_finding_viewList"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--            </ListView>-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/lend_or_return_layout">
+
+            <Button
+                android:id="@+id/lend"
+                style="@style/lend_or_return_button"
+                android:text="借  书" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

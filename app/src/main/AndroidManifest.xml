@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.booksys">
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--访问WI-FI状态-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--访问网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BookSys"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".android.user.find.FindList_Item"
+            android:exported="true" />
+        <activity
+            android:name=".android.user.lend.LendList_Item"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register" />
+<!--                  android:windowSoftInputMode="stateHidden|adjustPan" 使底部不会被输入框顶起来  -->
+        <activity
+            android:name=".android.user.UserActivity"
+            android:windowSoftInputMode="adjustPan"
+            />
+    </application>
+
+</manifest>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation">
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <RadioGroup
+        android:id="@+id/radioGrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp">
+
+
+        <RadioButton
+            android:id="@+id/user_finding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:drawableTop="@drawable/user_finding"
+            android:text="发现" />
+
+
+        <RadioButton
+            android:id="@+id/user_Lend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:drawableTop="@drawable/user_book"
+            android:text="已借书籍" />
+
+
+        <RadioButton
+            android:id="@+id/user_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/user_me"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="我" />
+
+    </RadioGroup>
+
+</LinearLayout>
